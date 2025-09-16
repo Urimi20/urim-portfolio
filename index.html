@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urim Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/main.css" />
+  </head>
+  <body class="bg-[color:var(--bg-main)] text-[color:var(--text-primary)]">
+    <div class="absolute bottom-30 right-40">
+      <img
+        src="src/assets/img/shadow1.svg"
+        alt=""
+        class=""
+        style="width: 600px"
+      />
+    </div>
+    <div class="absolute bottom-0 left-0">
+      <img
+        src="src/assets/img/shadow1.svg"
+        alt=""
+        class=""
+        style="width: 600px"
+      />
+    </div>
+
+    <!-- Navbar -->
+    <header class="flex justify-between items-center px-8 py-6">
+      <img src="src/assets/img/logo.png" alt="Aaronn Logo" class="w-32" />
+      <nav class="hidden md:flex gap-8 text-[color:var(--text-secondary)]">
+        <a href="#" class="hover:text-[color:var(--text-primary)]">Home</a>
+        <a href="#" class="hover:text-[color:var(--text-primary)]">About Me</a>
+        <a href="#" class="hover:text-[color:var(--text-primary)]">Projects</a>
+        <a href="#" class="hover:text-[color:var(--text-primary)]">Contact</a>
+      </nav>
+      <button class="md:hidden text-white">☰</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20">
+      <h2
+        class="text-4xl md:text-6xl font-extrabold text-[color:var(--text-primary)]"
+      >
+        Crafting Modern <br />
+        Front-End Experiences
+      </h2>
+      <p
+        class="mt-6 text-lg md:text-xl text-[color:var(--text-secondary)] max-w-2xl mx-auto"
+      >
+        Turning ideas into responsive, interactive, and user-friendly websites.
+        Specialized in HTML, CSS, JavaScript, React, and modern UI frameworks to
+        bring your brand to life on the web.
+      </p>
+      <button
+        class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)] transition"
+      >
+        Explore Works →
+      </button>
+    </section>
+
+    <!-- About Me -->
+    <section class="grid md:grid-cols-2 gap-10 items-center px-8 py-20">
+      <div>
+        <h3
+          class="text-3xl md:text-4xl font-bold text-[color:var(--text-primary)]"
+        >
+          Let’s get to know<br />about me closer
+        </h3>
+        <p class="mt-6 text-[color:var(--text-secondary)]">
+          Urim Avdiu is a Vushtrria-based programmer with a strong focus on web
+          development and modern digital solutions. His work highlights
+          creativity and functionality, spanning projects in responsive
+          websites, UI components, and interactive applications. Motivated and
+          detail-oriented, Urim brings both technical skill and fresh ideas to
+          every project.
+        </p>
+        <button
+          class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)]"
+        >
+          Discover More About Me →
+        </button>
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="src/assets/img/urim-img.png"
+          alt="About Me"
+          class="rounded-full shadow-lg w-100 l-100"
+        />
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="px-8 py-20">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-10">
+        My Projects Highlight
+      </h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+          <a href="https://tastewithtomato.netlify.app/">
+            <img
+              src="src/assets/img/first-web.png"
+              alt="Project 1"
+              class="rounded-lg mb-4"
+            />
+          </a>
+          <h4 class="text-xl font-semibold">Brand Journey Improvements</h4>
+          <p class="text-[color:var(--text-muted)] text-sm">
+            Design · Logo Design
+          </p>
+        </div>
+
+        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+          <a href="https://bitebuzz.netlify.app/registration.html">
+            <img
+              src="src/assets/img/second-web.png"
+              alt="Project 2"
+              class="rounded-lg mb-4"
+          /></a>
+
+          <h4 class="text-xl font-semibold">Brand Grouping</h4>
+          <p class="text-[color:var(--text-muted)] text-sm">
+            Branding · Logo Design
+          </p>
+        </div>
+
+        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+          <a
+            href="https://ua-social-media-clone.netlify.app/social-media.html#posts"
+          >
+            <img
+              src="src/assets/img/third-web.png"
+              alt="Project 3"
+              class="rounded-lg mb-4"
+            />
+          </a>
+
+          <h4 class="text-xl font-semibold">NFT Glimps</h4>
+          <p class="text-[color:var(--text-muted)] text-sm">NFT Design</p>
+        </div>
+
+        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+          <a href="">
+            <img
+              src="src/assets/img/fourth-web.png"
+              alt="Project 4"
+              class="rounded-lg mb-4"
+            />
+          </a>
+
+          <h4 class="text-xl font-semibold">Brand Suggestions</h4>
+          <p class="text-[color:var(--text-muted)] text-sm">UI · Vintage</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="px-8 py-20 bg-[color:var(--bg-section)] grid gap-40">
+      <h1 class="lg:text-7xl mb:text-4xl font-bold mb-8 text-center">
+        Programming Skills
+      </h1>
+      <div class="flex flex-wrap justify-center gap-5">
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          HTML
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          CSS
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          JavaScript
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          React
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          Git & GitHub
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          Bootstrap
+        </span>
+        <span
+          class="px-6 py-3 bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white text-lg font-semibold rounded-full shadow-md transition duration-300"
+        >
+          Tailwind CSS
+        </span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="px-8 py-12 text-center bg-[color:var(--bg-footer)] text-[color:var(--text-secondary)]"
+    >
+      <p
+        class="text-[color:var(--accent-color)] text-3xl md:text-4xl font-semibold"
+      >
+        Get In Touch With Us
+      </p>
+
+      <a
+        href="mailto:urimavdiu1@gmail.com"
+        class="block mt-4 text-4xl md:text-6xl font-bold underline text-[color:var(--text-primary)] hover:text-[color:var(--accent-color)] transition"
+      >
+        urimavdiu1@gmail.com
+      </a>
+
+      <!-- LOGO + INFO -->
+      <div
+        class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"
+      >
+        <img src="src/assets/img/logo.png" alt="Logo" class="h-16 w-auto" />
+
+        <div
+          class="flex flex-col md:flex-row gap-4 md:gap-12 text-xl md:text-2xl font-medium"
+        >
+          <p>RR. Haxhi Zeka, Vushtrri</p>
+          <p>044-848-188</p>
+        </div>
+      </div>
+
+      <!-- LINE + COPYRIGHT -->
+      <div
+        class="mt-10 border-t border-gray-600 pt-10"
+        style="width: 1000px; max-width: 100%"
+      >
+        <p class="text-base md:text-lg text-[color:var(--text-muted)]">
+          &copy; 2025, All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
