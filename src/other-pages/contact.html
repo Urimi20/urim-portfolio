@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Urim Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/assets/img/logo.png"
+    />
+  </head>
+  <body class="bg-[color:var(--bg-main)] text-[color:var(--text-primary)]">
+    <div class="absolute bottom-0 right-0">
+      <img
+        src="/src/assets/img/shadow1.svg"
+        alt=""
+        class=""
+        style="width: 600px"
+      />
+    </div>
+    <div class="absolute bottom-90 left-0">
+      <img
+        src="/src/assets/img/shadow1.svg"
+        alt=""
+        class=""
+        style="width: 600px"
+      />
+    </div>
+    <!-- Navbar -->
+    <header class="flex justify-between items-center px-8 py-6 relative">
+      <img src="/src/assets/img/logo.png" alt="Logo" class="w-32" />
+
+      <!-- Navbar -->
+      <nav
+        id="navbar"
+        class="fixed top-0 right-0 h-full w-64 bg-[color:var(--bg-card)] text-[color:var(--text-secondary)] transform translate-x-full transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:flex md:gap-8 md:bg-transparent md:w-auto md:h-auto md:p-0"
+      >
+        <ul class="flex flex-col md:flex-row gap-6 p-8 md:p-0">
+          <li>
+            <a href="/index.html" class="hover:text-[color:var(--text-primary)]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#aboutMe" class="hover:text-[color:var(--text-primary)]"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a href="" class="hover:text-[color:var(--text-primary)]"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/other-pages/contact.html"
+              class="hover:text-[color:var(--text-primary)]"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Burger Button -->
+      <button
+        id="burger"
+        class="md:hidden text-white text-3xl focus:outline-none z-50"
+      >
+        ☰
+      </button>
+
+      <!-- Overlay Background -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden md:hidden transition-opacity duration-300"
+      ></div>
+    </header>
+
+    <!-- Hero Contact -->
+    <section class="text-left py-20 px-10">
+      <h1 class="text-5xl md:text-7xl font-bold">CONTACT ME</h1>
+      <p class="mt-4 text-lg text-[color:var(--text-secondary)]">
+        For Any Project Knock Me
+      </p>
+      <hr class="mt-8 border-gray-100 w-100 mx-auto" />
+    </section>
+
+    <!-- Get In Touch -->
+    <section class="text-center py-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-8">
+        GET IN TOUCH <br />
+        WITH ME
+      </h2>
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-8 text-lg md:text-xl mb-12"
+      >
+        <p>RR. Haxhi Zeka, Vushtrri</p>
+        <p>044-848-188</p>
+        <p>urimavdiu1@gmail.com</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form
+        action="https://formspree.io/f/xqadrdpb"
+        method="POST"
+        class="max-w-2xl mx-auto flex flex-col gap-6 text-left"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+          class="bg-transparent border-b border-gray-600 focus:outline-none py-2"
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          class="bg-transparent border-b border-gray-600 focus:outline-none py-2"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Message"
+          required
+          class="bg-transparent border-b border-gray-600 focus:outline-none py-2"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-white px-6 py-3 rounded-full w-max self-start"
+        >
+          SEND
+        </button>
+      </form>
+    </section>
+
+    <!-- Map -->
+    <section class="w-full h-[700px]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.522703294909!2d20.9675!3d42.82306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537f37e4f4d8c7%3A0x9c7d1bb58b8f6c1f!2sVushtrri!5e0!3m2!1sen!2s!4v1692898434300!5m2!1sen!2s"
+        class="w-full h-full border-0 rounded-lg shadow-lg"
+        style="filter: grayscale(100%) invert(92%) contrast(90%)"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="px-8 py-12 text-center bg-[color:var(--bg-footer)] text-[color:var(--text-secondary)]"
+    >
+      <p
+        class="text-[color:var(--accent-color)] text-3xl md:text-4xl font-semibold"
+      >
+        Get In Touch With Us
+      </p>
+
+      <a
+        href="mailto:urimavdiu1@gmail.com"
+        class="block mt-4 text-4xl md:text-6xl font-bold underline text-[color:var(--text-primary)] hover:text-[color:var(--accent-color)] transition"
+      >
+        urimavdiu1@gmail.com
+      </a>
+
+      <!-- LOGO + INFO -->
+      <div
+        class="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12"
+      >
+        <img src="/src/assets/img/logo.png" alt="Logo" class="h-16 w-auto" />
+
+        <div
+          class="flex flex-col md:flex-row gap-4 md:gap-12 text-xl md:text-2xl font-medium"
+        >
+          <p>RR. Haxhi Zeka, Vushtrri</p>
+          <p>044-848-188</p>
+        </div>
+      </div>
+
+      <!-- LINE + COPYRIGHT -->
+      <div
+        class="mt-10 border-t border-gray-600 pt-10"
+        style="width: 1000px; max-width: 100%"
+      >
+        <p class="text-base md:text-lg text-[color:var(--text-muted)]">
+          &copy; 2025, All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>

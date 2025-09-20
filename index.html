@@ -6,6 +6,14 @@
     <title>Urim Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/assets/img/logo.png"
+    />
   </head>
   <body class="bg-[color:var(--bg-main)] text-[color:var(--text-primary)]">
     <div class="absolute bottom-30 right-40">
@@ -26,19 +34,57 @@
     </div>
 
     <!-- Navbar -->
-    <header class="flex justify-between items-center px-8 py-6">
-      <img src="src/assets/img/logo.png" alt="Aaronn Logo" class="w-32" />
-      <nav class="hidden md:flex gap-8 text-[color:var(--text-secondary)]">
-        <a href="#" class="hover:text-[color:var(--text-primary)]">Home</a>
-        <a href="#" class="hover:text-[color:var(--text-primary)]">About Me</a>
-        <a href="#" class="hover:text-[color:var(--text-primary)]">Projects</a>
-        <a href="#" class="hover:text-[color:var(--text-primary)]">Contact</a>
+    <header class="flex justify-between items-center px-8 py-6 relative">
+      <img src="src/assets/img/logo.png" alt="Logo" class="w-32" />
+
+      <!-- Navbar -->
+      <nav
+        id="navbar"
+        class="fixed top-0 right-0 h-full w-64 bg-[color:var(--bg-card)] text-[color:var(--text-secondary)] transform translate-x-full transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:flex md:gap-8 md:bg-transparent md:w-auto md:h-auto md:p-0"
+      >
+        <ul class="flex flex-col md:flex-row gap-6 p-8 md:p-0">
+          <li>
+            <a href="#home" class="hover:text-[color:var(--text-primary)]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#aboutMe" class="hover:text-[color:var(--text-primary)]"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-[color:var(--text-primary)]"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/other-pages/contact.html"
+              class="hover:text-[color:var(--text-primary)]"
+              >Contact</a
+            >
+          </li>
+        </ul>
       </nav>
-      <button class="md:hidden text-white">☰</button>
+
+      <!-- Burger Button -->
+      <button
+        id="burger"
+        class="md:hidden text-white text-3xl focus:outline-none z-50"
+      >
+        ☰
+      </button>
+
+      <!-- Overlay Background -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden md:hidden transition-opacity duration-300"
+      ></div>
     </header>
 
     <!-- Hero Section -->
-    <section class="text-center py-20">
+    <section id="home" class="text-center py-20">
       <h2
         class="text-4xl md:text-6xl font-extrabold text-[color:var(--text-primary)]"
       >
@@ -52,16 +98,31 @@
         Specialized in HTML, CSS, JavaScript, React, and modern UI frameworks to
         bring your brand to life on the web.
       </p>
-      <button
-        class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)] transition"
+      <a href="#projects"
+        ><button
+          class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)] transition"
+        >
+          Explore Works →
+        </button></a
       >
-        Explore Works →
-      </button>
     </section>
+    <!-- Moving Banner -->
+    <div class="relative overflow-hidden bg-orange-500 py-8">
+      <div
+        class="flex animate-marquee whitespace-nowrap text-white font-extrabold text-5xl"
+      >
+        <span class="mx-12">DESIGN ✦ DEVELOPMENT ✦ DISCOVER ✦ DESTINY</span>
+        <span class="mx-12">DESIGN ✦ DEVELOPMENT ✦ DISCOVER ✦ DESTINY</span>
+        <span class="mx-12">DESIGN ✦ DEVELOPMENT ✦ DISCOVER ✦ DESTINY</span>
+      </div>
+    </div>
 
     <!-- About Me -->
-    <section class="grid md:grid-cols-2 gap-10 items-center px-8 py-20">
-      <div>
+    <section
+      id="aboutMe"
+      class="grid md:grid-cols-2 gap-10 items-center px-8 py-20"
+    >
+      <div data-aos="fade-right">
         <h3
           class="text-3xl md:text-4xl font-bold text-[color:var(--text-primary)]"
         >
@@ -75,13 +136,15 @@
           detail-oriented, Urim brings both technical skill and fresh ideas to
           every project.
         </p>
-        <button
-          class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)]"
+        <a href="#services">
+          <button
+            class="mt-8 px-6 py-3 rounded-full font-semibold bg-[color:var(--accent-color)] hover:bg-[color:var(--accent-hover)] text-[color:var(--text-primary)]"
+          >
+            Discover More About Me →
+          </button></a
         >
-          Discover More About Me →
-        </button>
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center" data-aos="fade-left">
         <img
           src="src/assets/img/urim-img.png"
           alt="About Me"
@@ -89,14 +152,253 @@
         />
       </div>
     </section>
+    <section id="experience" class="px-6 md:px-16 py-20">
+      <h3
+        class="text-3xl md:text-4xl font-bold text-center mb-12 text-[color:var(--text-primary)]"
+      >
+        Learning Experiences
+      </h3>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div
+          class="rounded-2xl p-4 overflow-hidden shadow-lg bg-[color:var(--bg-card)]"
+          data-aos="fade-up"
+        >
+          <img
+            src="src/assets/img/MuhamerUjkani.jpeg"
+            alt="Muhamer Ujkani"
+            class="object-cover rounded-2xl items-center"
+          />
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img
+                src="src/assets/img/CTA1.png"
+                alt="CTA"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold text-[color:var(--text-primary)]">
+                  Muhamer Ujkani
+                </h4>
+                <p class="text-[color:var(--text-secondary)] text-sm">
+                  Coding Training Academy
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 text-[color:var(--text-secondary)] leading-relaxed">
+              As a director and manager at the Coding Training Academy , Muhamer
+              guided me through the first steps of programming. His leadership
+              and dedication made a significant impact, helping me build a
+              strong foundation in software development and preparing me for
+              more advanced challenges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="rounded-2xl p-4 overflow-hidden shadow-lg bg-[color:var(--bg-card)]"
+          data-aos="fade-up"
+        >
+          <img
+            src="src/assets/img/EladiadSadiku.jpeg"
+            alt="Eladiad Sadiku"
+            class="object-cover rounded-2xl items-center"
+          />
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img
+                src="src/assets/img/RCS1.png"
+                alt="RCS"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h4 class="font-semibold text-[color:var(--text-primary)]">
+                  Eladiad Sadiku
+                </h4>
+                <p class="text-[color:var(--text-secondary)] text-sm">
+                  Remote Company Simulation
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 text-[color:var(--text-secondary)] leading-relaxed">
+              Eladiad was my team manager during the Remote Company Simulation.
+              He not only introduced me to the basics of programming but also
+              prepared me for the job market by guiding me through real-world
+              projects. His mentorship helped me gain the confidence and skills
+              I needed to take my first professional steps in the tech field.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="rounded-2xl p-4 overflow-hidden shadow-lg bg-[color:var(--bg-card)]"
+          data-aos="fade-up"
+        >
+          <img
+            src="src/assets/img/HysenStublla.jpeg"
+            alt="Hysen Stublla"
+            class="object-cover rounded-2xl items-center"
+          />
+          <div class="p-6">
+            <div class="flex items-center gap-4">
+              <img
+                src="src/assets/img/techLab.png"
+                alt="Tech Lab"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h4 class="font-semibold text-[color:var(--text-primary)]">
+                  Hysen Stublla
+                </h4>
+                <p class="text-[color:var(--text-secondary)] text-sm">
+                  Tech Lab Speeex
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 text-[color:var(--text-secondary)] leading-relaxed">
+              Hysen was my trainer at Tech Lab Speeex, where he shared his
+              valuable knowledge of programming. His guidance not only
+              strengthened my technical skills but also gave me a deeper
+              understanding of the industry. Today, he continues to inspire as a
+              team leader in practice at Tech Lab.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="px-6 md:px-16 py-24 bg-[color:var(--bg-section)]"
+    >
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-16 text-center">
+        Services I Offer
+      </h2>
+
+      <div class="space-y-14">
+        <!-- HTML / CSS -->
+        <div
+          data-aos="fade-right"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-600 pb-10 transition-all duration-300 hover:translate-x-2"
+        >
+          <div class="max-w-3xl">
+            <h3 class="text-3xl md:text-4xl font-bold">
+              HTML & CSS Development
+            </h3>
+            <p
+              class="text-lg md:text-xl text-[color:var(--text-secondary)] mt-4 leading-relaxed"
+            >
+              Clean, semantic, and fully responsive code to make your website
+              modern and accessible across all devices.
+            </p>
+          </div>
+          <span
+            class="text-[color:var(--accent-color)] text-5xl md:text-6xl mt-6 md:mt-0 group-hover:rotate-45 transition-transform"
+            >↗</span
+          >
+        </div>
+
+        <!-- JavaScript -->
+        <div
+          data-aos="fade-left"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-600 pb-10 transition-all duration-300 hover:translate-x-2"
+        >
+          <div class="max-w-3xl">
+            <h3 class="text-3xl md:text-4xl font-bold">
+              JavaScript Functionality
+            </h3>
+            <p
+              class="text-lg md:text-xl text-[color:var(--text-secondary)] mt-4 leading-relaxed"
+            >
+              Dynamic and interactive websites using modern ES6+ features to
+              enhance user experience.
+            </p>
+          </div>
+          <span
+            class="text-[color:var(--accent-color)] text-5xl md:text-6xl mt-6 md:mt-0 group-hover:rotate-45 transition-transform"
+            >↗</span
+          >
+        </div>
+
+        <!-- React.js -->
+        <div
+          data-aos="fade-right"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-600 pb-10 transition-all duration-300 hover:translate-x-2"
+        >
+          <div class="max-w-3xl">
+            <h3 class="text-3xl md:text-4xl font-bold">React.js Development</h3>
+            <p
+              class="text-lg md:text-xl text-[color:var(--text-secondary)] mt-4 leading-relaxed"
+            >
+              Building scalable single-page applications with reusable
+              components and smooth UI/UX.
+            </p>
+          </div>
+          <span
+            class="text-[color:var(--accent-color)] text-5xl md:text-6xl mt-6 md:mt-0 group-hover:rotate-45 transition-transform"
+            >↗</span
+          >
+        </div>
+
+        <!-- Tailwind / Bootstrap -->
+        <div
+          data-aos="fade-left"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-600 pb-10 transition-all duration-300 hover:translate-x-2"
+        >
+          <div class="max-w-3xl">
+            <h3 class="text-3xl md:text-4xl font-bold">
+              Tailwind & Bootstrap Styling
+            </h3>
+            <p
+              class="text-lg md:text-xl text-[color:var(--text-secondary)] mt-4 leading-relaxed"
+            >
+              Rapid UI design with frameworks like TailwindCSS and Bootstrap,
+              optimized for speed and consistency.
+            </p>
+          </div>
+          <span
+            class="text-[color:var(--accent-color)] text-5xl md:text-6xl mt-6 md:mt-0 group-hover:rotate-45 transition-transform"
+            >↗</span
+          >
+        </div>
+
+        <!-- Git & GitHub -->
+        <div
+          data-aos="fade-right"
+          class="group flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-600 pb-10 transition-all duration-300 hover:translate-x-2"
+        >
+          <div class="max-w-3xl">
+            <h3 class="text-3xl md:text-4xl font-bold">
+              Version Control (Git & GitHub)
+            </h3>
+            <p
+              class="text-lg md:text-xl text-[color:var(--text-secondary)] mt-4 leading-relaxed"
+            >
+              Efficient project collaboration and code management with Git &
+              GitHub workflows.
+            </p>
+          </div>
+          <span
+            class="text-[color:var(--accent-color)] text-5xl md:text-6xl mt-6 md:mt-0 group-hover:rotate-45 transition-transform"
+            >↗</span
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- Projects -->
-    <section class="px-8 py-20">
+    <section id="projects" class="px-8 py-20">
       <h3 class="text-3xl md:text-4xl font-bold text-center mb-10">
         My Projects Highlight
       </h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+        <div
+          data-aos="fade-up"
+          class="bg-[color:var(--bg-section)] p-4 rounded-lg"
+        >
           <a href="https://tastewithtomato.netlify.app/">
             <img
               src="src/assets/img/first-web.png"
@@ -110,7 +412,10 @@
           </p>
         </div>
 
-        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+        <div
+          data-aos="fade-up"
+          class="bg-[color:var(--bg-section)] p-4 rounded-lg"
+        >
           <a href="https://bitebuzz.netlify.app/registration.html">
             <img
               src="src/assets/img/second-web.png"
@@ -124,7 +429,10 @@
           </p>
         </div>
 
-        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+        <div
+          data-aos="fade-up"
+          class="bg-[color:var(--bg-section)] p-4 rounded-lg"
+        >
           <a
             href="https://ua-social-media-clone.netlify.app/social-media.html#posts"
           >
@@ -139,7 +447,10 @@
           <p class="text-[color:var(--text-muted)] text-sm">NFT Design</p>
         </div>
 
-        <div class="bg-[color:var(--bg-section)] p-4 rounded-lg">
+        <div
+          data-aos="fade-up"
+          class="bg-[color:var(--bg-section)] p-4 rounded-lg"
+        >
           <a href="">
             <img
               src="src/assets/img/fourth-web.png"
@@ -209,7 +520,7 @@
       </p>
 
       <a
-        href="mailto:urimavdiu1@gmail.com"
+        href="/src/other-pages/contact.html"
         class="block mt-4 text-4xl md:text-6xl font-bold underline text-[color:var(--text-primary)] hover:text-[color:var(--accent-color)] transition"
       >
         urimavdiu1@gmail.com
@@ -239,5 +550,11 @@
         </p>
       </div>
     </footer>
+
+    <script src="/src/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
   </body>
 </html>

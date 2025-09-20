@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* variables start */
 :root {
   /* Backgrounds */
@@ -7,6 +11,7 @@
   --bg-section: #1a1a1a;
   --bg-footer: #0a0a0a;
   --bg-white: white;
+  --bg-card: #2f2f2f;
 
   /* Text */
   --text-primary: #ffffff;
@@ -51,4 +56,20 @@ button {
 
 button:hover {
   background-color: var(--accent-hover);
+}
+
+/* moving section */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  min-width: 100%;
+  animation: marquee 50s linear infinite;
 }
