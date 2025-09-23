@@ -8,13 +8,17 @@ function closeMenu() {
   overlay.classList.add("hidden");
 }
 
+function openMenu() {
+  navbar.classList.replace("translate-x-full", "translate-x-0");
+  overlay.classList.remove("hidden");
+}
+
 burger.addEventListener("click", () => {
   const isOpen = navbar.classList.contains("translate-x-0");
-
   if (isOpen) {
     closeMenu();
   } else {
-    navbar.classList.replace("translate-x-full", "translate-x-0");
+    openMenu();
   }
 });
 
